@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutors</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+ form input, textarea{
+  background-color: #eaf0ff;
+  border-radius: 5px;
+ }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="header-container">
+      <span style="margin-left: 6%;color:#6AA75A; font-size: 35px;"class="logo"><b>CODEMENTORS</b></span>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="services.html">SERVICES</a></li>
+          <li><a href="pricing.html">PRICING</a></li>
+          <li><a href="Bookings.html">BOOK US</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <body>
+      <center>
+
+        <h1 style="text-align: center; margin-top: 8%;">Book a Tutoring Session</h1>
+
+        <form id="form2">
+          <label for="fullName">Full Name:</label>
+          <input type="text" id="fullName" name="fullName" required>
+      
+          <label for="email2">Email Address:</label>
+          <input type="email" id="email2" name="email" required>
+      
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" required>
+      
+          <label for="subject">Choose Subject:</label> 
+          <select id="subject" name="subject" required>
+              <option value="">Select a subject</option>
+              <option value="Python">Python</option>
+              <option value="Java">Java</option>
+              <option value="JavaScript">JavaScript</option>
+              <option value="CSS">CSS</option>
+              <option value="HTML">HTML</option>
+          </select>
+      
+          <label for="date">Choose Date:</label>
+          <input type="date" id="date" name="date" required min="2024-02-15" max="2024-12-31">
+      
+          <label for="time">Choose Time:</label>
+          <select id="time" name="time" required>
+              <option value="">Select a time</option>
+              <option value="Morning">Morning</option>
+              <option value="Afternoon">Afternoon</option>
+              <option value="Evening">Evening</option>
+          </select>
+      
+          <button type="button" onclick="validateForm()">Book</button>
+      </form>
+      
+      <script>
+      function validateForm() {
+      var fullName = document.getElementById("fullName").value;
+      var email = document.getElementById("email2").value;
+      var phone = document.getElementById("phone").value;
+      var subject = document.getElementById("subject").value;
+      var date = document.getElementById("date").value;
+      var time = document.getElementById("time").value;
+
+      // Validate full name
+      if (fullName.trim() === "") {
+        showAlert("Please enter your full name.");
+        return;
+      }
+
+      // Validate email
+      if (!validateEmail(email)) {
+        showAlert("Please enter a valid email address.");
+        return;
+      }
+
+      // Validate phone number
+      if (!validatePhoneNumber(phone)) {
+        showAlert("Please enter a valid phone number.");
+        return;
+      }
+
+      // Validate subject
+      if (subject === "") {
+        showAlert("Please select a subject.");
+        return;
+      }
+
+      // Validate date
+      if (date === "") {
+        showAlert("Please choose a date.");
+        return;
+      }
+
+      // Validate time
+      if (time === "") {
+        showAlert("Please select a time.");
+        return;
+      }
+
+      // Check if the selected date is in the past
+      var selectedDate = new Date(date);
+      var currentDate = new Date();
+
+      if (selectedDate < currentDate) {
+        showAlert("Please choose a date in the future.");
+        return;
+      }
+
+      showAlert("Form submitted successfully!", "green");
+    }
+
+    // Function to validate email
+    function validateEmail(email) {
+      const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return regex.test(email);
+    }
+
+    // Function to validate phone number
+    function validatePhoneNumber(phone) {
+      const regex = /^\d{10}$/;
+      return regex.test(phone);
+    }
+
+    // Function to display alert message
+    function showAlert(message, color) {
+      var alertBox = document.createElement('div');
+      alertBox.textContent = message;
+      alertBox.style.backgroundColor = color || 'red';
+      alertBox.style.color = 'white';
+      alertBox.style.padding = '10px';
+      alertBox.style.borderRadius = '5px';
+      alertBox.style.marginBottom = '10px';
+      alertBox.style.width = '200px';
+      alertBox.style.textAlign = 'center';
+      alertBox.style.position = 'fixed';
+      alertBox.style.top = '50%';
+      alertBox.style.left = '50%';
+      alertBox.style.transform = 'translate(-50%, -50%)';
+      alertBox.id = 'alertBox';
+      document.body.appendChild(alertBox);
+
+      // Remove the alert after 3 seconds
+      setTimeout(function () {
+        removeAlert();
+      }, 3000);
+    }
+
+    // Function to remove alert message
+    function removeAlert() {
+      var existingAlert = document.getElementById('alertBox');
+      if (existingAlert) {
+        existingAlert.parentNode.removeChild(existingAlert);
+      }
+    }
+      </script>
+  
+      </center>
+
+      <footer>
+        <div>
+          <span style="margin-left: 3%;color:#6AA75A;"class="logo"><b>CODEMENTORS</b></span>
+          <span style="margin-left: 3%;margin-right: 3%">&copy; </span> 2024
+        </div>
+      
+        <div class="social-icon">
+         <span style="color: aliceblue;" > <i class="far fa-envelope"></i>info@codementoS.org.za</a><br>
+            <i class="fas fa-phone"></i>+2 145 525 5256</a><br>
+            <i class="fas fa-map-marker-alt"></i> 123 Main Road Salt River</span>
+           
+        </div>
+        </div>
+      </footer>
+</body>
+</html>
+

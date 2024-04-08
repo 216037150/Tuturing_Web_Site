@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutors</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+ form input, textarea{
+  background-color: #eaf0ff;
+  border-radius: 5px;
+ }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="header-container">
+      <span style="margin-left: 6%;color:#6AA75A; font-size: 35px;"class="logo"><b>CODEMENTORS</b></span>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="services.html">SERVICES</a></li>
+          <li><a href="pricing.html">PRICING</a></li>
+          <li><a href="Bookings.html">BOOK US</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <body>
+   <center>
+<br><br><br>
+    <h1><b>Contact Us</b></h1>
+    <h2>Have questions or concerns? Reach out to us</h2>
+      
+    <p>
+      <i class="far fa-envelope"></i> <a href="mailto:info@codementors.com" style="color: black; text-decoration: none;">info@codementoS.org.za</a><br> 
+      <i class="fas fa-phone"></i> <a href="tel:+123456789"  style="color: black; text-decoration: none;">+2 145 525 5256</a><br> 
+      <i class="fas fa-map-marker-alt" ></i> 123 Main Road Salt River
+    </p> 
+    
+      <time datetime="07:45:00"><strong>Opening time: </strong>  07:45 - 16:45</time> <br>
+      <p><b>Days: </b> Monday - Friday</p>
+      <form id="form1">
+        <label for="name">Name:</label>
+        <input name="name" id="name" type="text" required> <br> <br>
+      
+        <label for="email">Email:</label>
+        <input name="email" id="email" type="email" required placeholder="info@gmail.com"> <br> <br>
+      
+        <label for="message" style="color: white;">Message:</label>
+        <textarea id="message" name="message" cols="28" rows="10" required></textarea> <br><br>
+      
+        <button type="button" onclick="validateForm()">Submit</button>
+      </form>
+      
+      <script>
+      function validateEmail(email) {
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(email);
+      }
+      
+      function validateForm() {
+        var nameInput = document.getElementById("name");
+        var emailInput = document.getElementById("email");
+        var messageInput = document.getElementById("message");
+      
+        removeAlert();
+      
+        if (nameInput.validity.valueMissing) {
+          showAlert("Please enter your name.");
+          return;
+        }
+      
+        if (emailInput.validity.valueMissing) {
+          showAlert("Please enter your email address.");
+          return;
+        }
+        
+        if (!validateEmail(emailInput.value)) {
+          showAlert("Please enter a valid email address.");
+          return;
+        }
+      
+        if (messageInput.validity.valueMissing) {
+          showAlert("Please enter your message.");
+          return;
+        }
+      
+        submitForm();
+      }
+      
+      function showAlert(message) {
+        var alertBox = document.createElement('div');
+        alertBox.textContent = message;
+        alertBox.style.backgroundColor = 'red';
+        alertBox.style.color = 'white';
+        alertBox.style.padding = '10px';
+        alertBox.style.borderRadius = '5px';
+        alertBox.style.marginBottom = '10px';
+        alertBox.style.width = '200px'; 
+        alertBox.style.textAlign = 'center';
+        alertBox.style.position = 'fixed';
+        alertBox.style.top = '50%'; 
+        alertBox.style.left = '50%'; 
+        alertBox.style.transform = 'translate(-50%, -50%)';
+        alertBox.id = 'alertBox'; 
+        document.body.appendChild(alertBox);
+      
+        // Remove the alert after 3 seconds
+        setTimeout(function() {
+          removeAlert();
+        }, 3000);
+      }
+      
+      function removeAlert() {
+        var existingAlert = document.getElementById('alertBox');
+        if (existingAlert) {
+          existingAlert.parentNode.removeChild(existingAlert);
+        }
+      }
+      
+      function submitForm() {
+        // Server-side processing can be done here
+        // For demonstration purposes, I'll show an alert message
+        alert("Form submitted successfully!");
+      }
+      </script>
+      
+   </center>
+   <br>
+   <br>
+   <footer>
+    <div>
+      <span style="margin-left: 3%;color:#6AA75A;"class="logo"><b>CODEMENTORS</b></span>
+      <span style="margin-left: 3%;margin-right: 3%">&copy; </span> 2024
+    </div>
+  
+    <div class="social-icon">
+     <span style="color: aliceblue;" > <i class="far fa-envelope"></i>info@codementoS.org.za</a><br>
+        <i class="fas fa-phone"></i>+2 145 525 5256</a><br>
+        <i class="fas fa-map-marker-alt"></i> 123 Main Road Salt River</span>
+       
+    </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
+
+
+
+
+
