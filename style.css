@@ -135,11 +135,11 @@ footer div p a:hover {
   header {
     background-color: black; 
     color: #fff; 
-    padding: 10px 0; 
+    padding: 40px 0; 
     overflow: hidden;
     position: fixed;
     width: 100%;
-    z-index: 1;
+
    
   }
   
@@ -569,7 +569,8 @@ border-radius: 5%;
 #About,
 #Contact,
 #Pricing, 
-#BookUs{
+#BookUs
+{
     padding: 100px 0;
 }
 
@@ -933,3 +934,88 @@ h4 {
   margin-top: 10px; /* Add margin for spacing */
 }
 
+/*Pricing styel*/
+form input, textarea{
+  background-color: #eaf0ff;
+  border-radius: 5px;
+ }
+.box-price {
+  width: 580px;
+  background-color: #0A1C2B;
+  margin: 30px;
+  margin-bottom: 50px;
+  display: flex;
+  height: 270px;
+  border-radius: 5px;
+
+}
+
+
+.main-box-price{
+  display: flex;
+  text-align: center;
+}
+
+.box-price:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+  color: aqua;
+  background-color: #1275c6;
+  }
+
+  /*drop down*/
+  .dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  display: block;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f4f4f4;
+}
+
+.containerC {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px; /* Adjust as needed */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+.left-container,
+.right-container {
+  flex: 1;
+  padding: 50px; /* Adjust spacing as needed */
+}
+
+.left-container {
+  text-align: left;
+}
+
+.right-container {
+  text-align: center;
+}
+
+/* Add additional styling as needed */
+
+
+  

@@ -65,16 +65,24 @@
         <nav class="nav-menu">
           <ul>
             <li><a href="index.html">HOME</a></li>
-            <li><a href="about.html">ABOUT</a></li>
-            <li><a href="services.html">SERVICES</a></li>
-            <li><a href="pricing.html">PRICING</a></li>
-            <li><a href="Bookings.html">BOOK US</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="#About">ABOUT</a></li>
+            <li><a href="#Services">SERVICES</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle">PAGES <i class="fa fa-caret-down"></i></a>
+              <ul class="dropdown-menu">  
+                
+                <li><a href="#Tutors">Tutors</a></li> <br>
+                <li><a href="#Testemonials">Testimonials</a></li> <br>
+                <li><a href="Bookings.html">Book Us</a></li>
+              </ul>
+            </li>
+            <li><a href="#Contact">CONTACT</a></li>
             <span class="text-center" style="padding-top: 40px;padding-bottom: 20px;padding-right: 30px;">
               <a href="#" onclick="openPopup()" class="more-btn" style="font-size: 16px;"><i class="fa fa-user" aria-hidden="true"></i> Login<i class="bx bx-chevron-right"></i></a>
             </span>
           </ul>
         </nav>
+        
       </div>
     </header>
 
@@ -107,7 +115,7 @@
         </p>
         <div class="text-center" style="padding-top: 40px; padding-bottom: 20px;">
           <a href="about.html"  class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
-          <a href="about.html" class="more-btn">Register <i class="bx bx-chevron-right"></i></a>
+          <a href="#" class="more-btn">Curriculumn <i class="bx bx-chevron-right"></i></a>
         </div>
         
       </div>
@@ -118,124 +126,135 @@
   </div>
  
   </section>
-  <section style="background-color: white;padding-top: 1px;padding-bottom: 100px;" >
-        <!--==========================BOX==================-->    
+  <section style="background-color: white;" >
 
-  <h3 style="text-align: center; color: black;" >ABOUT US</h3>
+        <!--==========================BOX==================--> 
+      <div id="About">
+        <h3 style="text-align: center; color: black;" >ABOUT US</h3>
         <div style="width: 100%; height: 200px; text-align:center;padding: 2px;color:white;font-size: 20px;" class="pricing-plan">
           <p style="padding: 10px; font-size: 20px;">Welcome to <strong>codementor</strong> , is a platform 
             dedicated to empowering aspiring coders by bridging the gap between ambition and expertise in programming. 
             With personalized tutoring from experienced mentors, whether you're a beginner or an experienced developer,
             CodeMentor offers a transformative learning experience to shape your future in the dynamic world of technology.</p>
         </div>
-      <h4 style="font-size: 24px; text-align: center;">Our Tutors</h4>
-      <div class="container-tutor">
-        <div class="box">
-          <figure>
-            <a href="#">
-              <img src="images/MasiyaZungu.jpg" alt="Masiya" class="imgTutor">
-            </a>
-            <figcaption>Masiya</figcaption>
-          </figure>
-        </div>
-        <div class="box">
-          <figure>
-            <a href="#">
-              <img src="images/Gogi.jpeg" alt="Gogi" class="imgTutor">
-            </a>
-            <figcaption>Gogi</figcaption>
-          </figure>
-        </div>
-        <div class="box">
-          <figure>
-            <a href="#">
-              <img src="images/X.jpg" alt="Xola" class="imgTutor">
-            </a>
-            <figcaption>Xola</figcaption>
-          </figure>
-        </div>
-        <div class="box">
-          <figure>
-            <a href="#">
-              <img src="images/Vuyokaz.jpeg" alt="Python" class="imgTutor">
-            </a>
-            <figcaption>Vuyokazi</figcaption>
-          </figure>
-        </div>
-        <div class="box">
-          <figure>
-            <a href="#">
-              <img src="images/Cris.jpeg" alt="Chris" class="imgTutor">
-            </a>
-            <figcaption>Chris</figcaption>
-          </figure>
-        </div>
-      </div>
-        
-<section>
-    <!--==========================BOX====================-->
-    <h3 style="text-align: center;">SERVICES</h3>
+       </div>
+  </section>
 
-      <div class="container">
-
-        <div class="box">
-          <h4 style="text-align: center;"> </h4>
-         <center>
-          <figure>
-            <a href="#" style="text-align: center; padding-top:400px;">
-              <img height="180px" width="160px" src="images/html-tra.png" alt="HTML"></a>
-            <br><br><br>
-            <figcaption style="color: white;">Cascading Style Sheets</figcaption>
-          </figure>
-         </center>
-        </div>
-        <div class="box" style="text-align: center;">
-            <center>
+       <section id = "Services">
+        <h4 style="text-align: center;"> SERVICES</h4>
+        <!--==========================BOX====================-->
+          <div class="container">
+    
+            <div class="box">
+             <center>
               <figure>
-                <a href="#" style="text-align: center; padding-top:400px;">
-                  <img height="180px" width="160px" src="images/css-tra.png" alt="CSS"></a>    
-                  <br><br><b></b><br>
-                  <figcaption style="color: white;">Hyper Text Markup Language.</figcaption>
+                <a href="#" style="text-align: center;">
+                  <img height="180px" width="160px" src="images/html-tra.png" alt="HTML"></a>
+                <br><br><br>
+                <figcaption style="color: white;">Cascading Style Sheets</figcaption>
               </figure>
-            </center>
-      
+             </center>
+            </div>
+            <div class="box" style="text-align: center;">
+                <center>
+                  <figure>
+                    <a href="#" style="text-align: center; padding-top:400px;">
+                      <img height="180px" width="160px" src="images/css-tra.png" alt="CSS"></a>    
+                      <br><br><b></b><br>
+                      <figcaption style="color: white;">Hyper Text Markup Language.</figcaption>
+                  </figure>
+                </center>
+          
+            </div>
+            <div class="box">
+                <center>
+                  <figure>
+                    <a href="#" style="text-align: center; padding-top:500px;">
+                    <img height="180px" width="160px"src="images/javas-tra.png" alt="JavaScript"></a>
+                    <br><br><b></b><br>
+                      <figcaption style="color: white;">JavaScript</figcaption>
+                  </figure>
+                </center>
+          
+            </div>
+            <div class="box">
+                <center>
+                  <figure>
+                    <a href="#"style="text-align: center; padding-top:400px;">
+                    <img height="180px" width="160px"  src="images/python-tra.png" alt="Python"></a> 
+                    <br><br><b></b><br>
+                    <figcaption style="color: white;">Python</figcaption>
+                  </figure>
+                </center>
+            </div>
+            <div class="box">      
+                <center>
+                  <figure>
+                    <a href="#" style="text-align: center; padding-top:400px;">
+                    <img height="200px" width="160px" src="images/java-tra.png" alt="Java"></a> 
+                    <br><br><b></b><br>
+                    <figcaption style="color: white;">Java</figcaption>
+                  </figure>
+                </center>
+          </div>
         </div>
-        <div class="box">
-            <center>
-              <figure>
-                <a href="#" style="text-align: center; padding-top:500px;">
-                <img height="180px" width="160px"src="images/javas-tra.png" alt="JavaScript"></a>
-                <br><br><b></b><br>
-                  <figcaption style="color: white;">JavaScript</figcaption>
-              </figure>
-            </center>
-      
-        </div>
-        <div class="box">
-            <center>
-              <figure>
-                <a href="#"style="text-align: center; padding-top:400px;">
-                <img height="180px" width="160px"  src="images/python-tra.png" alt="Python"></a> 
-                <br><br><b></b><br>
-                <figcaption style="color: white;">Python</figcaption>
-              </figure>
-            </center>
-        </div>
-        <div class="box">      
-            <center>
-              <figure>
-                <a href="#" style="text-align: center; padding-top:400px;">
-                <img height="200px" width="160px" src="images/java-tra.png" alt="Java"></a> 
-                <br><br><b></b><br>
-                <figcaption style="color: white;">Java</figcaption>
-              </figure>
-            </center>
-      </div>
+    </section>
+    
+<section id="Tutors">
+  <h4 style="font-size: 24px; text-align: center; padding-top: 2%;">Meet Our Tutors</h4>
+  <div class="container-tutor">
+    <div class="box">
+      <figure>
+        <a href="#">
+          <img src="images/MasiyaZungu.jpg" alt="Masiya" class="imgTutor">
+        </a>
+        <figcaption>Masiya</figcaption>
+      </figure>
     </div>
+    <div class="box">
+      <figure>
+        <a href="#">
+          <img src="images/Gogi.jpeg" alt="Gogi" class="imgTutor">
+        </a>
+        <figcaption>Gogi</figcaption>
+      </figure>
+    </div>
+    <div class="box">
+      <figure>
+        <a href="#">
+          <img src="images/X.jpg" alt="Xola" class="imgTutor">
+        </a>
+        <figcaption>Xola</figcaption>
+      </figure>
+    </div>
+    <div class="box">
+      <figure>
+        <a href="#">
+          <img src="images/Vuyokaz.jpeg" alt="Python" class="imgTutor">
+        </a>
+        <figcaption>Vuyokazi</figcaption>
+      </figure>
+    </div>
+    <div class="box">
+      <figure>
+        <a href="#">
+          <img src="images/Cris.jpeg" alt="Chris" class="imgTutor">
+        </a>
+        <figcaption>Chris</figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
+
 </section>
 
+</section>
+      
+
 <!--==Testmonials==-->
-<section style="background-color: white;"> 
+<section id = "Testemonials">
+
+<div style="background-color: white; padding-top: 8%;"> 
   <h1 style="text-align: center; color: black; padding-bottom: 10px;">TESTIONIALS</h1>
 <div class="testimonials-container">
   <div class="testimonial-card" style="cursor: pointer;" >
@@ -272,9 +291,122 @@
   <span class="testimonial-author">~ Siwinile Mdani</span>
 </div>
 </div> 
-<br>
+</div>
+</section>
+
+<!--Contact us page-->
+<Center id="Contact"> <h1><b>Contact Us</b></h1>
+  <h2>Have questions or concerns? Reach out to us</h2> </Center>
+
+<div class="containerC">
+  <div class="left-container">
+    <section id="ContactInfo">
+      
+      <p>
+        <i class="far fa-envelope"></i> <a href="mailto:info@codementors.com" style="color: black; text-decoration: none;">info@codementoS.org.za</a><br> 
+        <i class="fas fa-phone"></i> <a href="tel:+123456789" style="color: black; text-decoration: none;">+2 145 525 5256</a><br> 
+        <i class="fas fa-map-marker-alt"></i> 123 Main Road Salt River
+      </p> 
+      
+      <time datetime="07:45:00"><strong>Opening time: </strong>  07:45 - 16:45</time> <br>
+      <p><b>Days: </b> Monday - Friday</p>
+    </section>
+  </div>
+  <div class="right-container">
+    <form id="form1">
+      <h1>Send us Message</h1>
+      <label for="name">Name:</label>
+      <input name="name" id="name" type="text" required> <br> <br>
+    
+      <label for="email">Email:</label>
+      <input name="email" id="email" type="email" required placeholder="info@gmail.com"> <br> <br>
+    
+      <label for="message" style="color: white;">Message:</label>
+      <textarea id="message" name="message" cols="28" rows="10" required></textarea> <br><br>
+    
+      <button type="button" onclick="validateForm()">Submit</button>
+    </form>
+  </div>
+</div>
+
+    
+    <script>
+    function validateEmail(email) {
+      const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return regex.test(email);
+    }
+    
+    function validateForm() {
+      var nameInput = document.getElementById("name");
+      var emailInput = document.getElementById("email");
+      var messageInput = document.getElementById("message");
+    
+      removeAlert();
+    
+      if (nameInput.validity.valueMissing) {
+        showAlert("Please enter your name.");
+        return;
+      }
+    
+      if (emailInput.validity.valueMissing) {
+        showAlert("Please enter your email address.");
+        return;
+      }
+      
+      if (!validateEmail(emailInput.value)) {
+        showAlert("Please enter a valid email address.");
+        return;
+      }
+    
+      if (messageInput.validity.valueMissing) {
+        showAlert("Please enter your message.");
+        return;
+      }
+    
+      submitForm();
+    }
+    
+    function showAlert(message) {
+      var alertBox = document.createElement('div');
+      alertBox.textContent = message;
+      alertBox.style.backgroundColor = 'red';
+      alertBox.style.color = 'white';
+      alertBox.style.padding = '10px';
+      alertBox.style.borderRadius = '5px';
+      alertBox.style.marginBottom = '10px';
+      alertBox.style.width = '200px'; 
+      alertBox.style.textAlign = 'center';
+      alertBox.style.position = 'fixed';
+      alertBox.style.top = '50%'; 
+      alertBox.style.left = '50%'; 
+      alertBox.style.transform = 'translate(-50%, -50%)';
+      alertBox.id = 'alertBox'; 
+      document.body.appendChild(alertBox);
+    
+      // Remove the alert after 3 seconds
+      setTimeout(function() {
+        removeAlert();
+      }, 3000);
+    }
+    
+    function removeAlert() {
+      var existingAlert = document.getElementById('alertBox');
+      if (existingAlert) {
+        existingAlert.parentNode.removeChild(existingAlert);
+      }
+    }
+    
+    function submitForm() {
+      // Server-side processing can be done here
+      // For demonstration purposes, I'll show an alert message
+      alert("Form submitted successfully!");
+    }
+    </script>
+    
+ </center>
 
 </section>
+
 
 <!--=======TOP UP Button====-->
 <button id="top-up-btn" onclick="scrollToTop()" style="margin-left:94%; width: 70px; height: 70px;  background-color: #6AA75A; border-radius: 100px; text-align: center;" ><i class="fas fa-arrow-up"></i></button>   

@@ -78,3 +78,13 @@ do {
     slides[i].addEventListener('mouseleave', resumeSlides, false);
     i++;
 } while (i < slides.length);
+
+// Dropdown
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll('.dropdown-toggle').forEach(function(element) {
+      element.addEventListener('click', function(e) {
+        e.preventDefault();
+        this.parentElement.classList.toggle('open');
+      });
+    });
+  });
