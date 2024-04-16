@@ -366,6 +366,7 @@ footer{
   color: #888;
 }
 
+
 .form-container {
   text-align: center;
 }
@@ -541,7 +542,7 @@ transform:translateY(1px);
 styling the certificate
 */
 
-.box:hover {
+.box2:hover {
 transform: scale(1.05);
 cursor: pointer;
 color: aqua;
@@ -557,13 +558,23 @@ margin-top: 2%;
 margin-left: 2%;
 margin-right: 2%;
 }
-.box {
+
+.box2 {
 width: 300px;
-height: 400px;
+height: 450px;
 background-color: #0A1C2B;
 margin: 5px;
 border-radius: 5%;
 }
+
+.box {
+  width: 300px;
+  height: 450px;
+  background-color: #0A1C2B;
+  margin: 5px;
+  border-radius: 5%;
+  }
+  
 
 #Services,
 #About,
